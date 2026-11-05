@@ -1,0 +1,8 @@
+# Fins de ligne normalisées
+* text=auto eol=lf
+
+# Exclus des archives générées par GitHub (zip des releases)
+.gitattributes export-ignore
+.gitignore     export-ignore
+.github        export-ignore
+CHANGELOG.md   export-ignore

@@ -1,0 +1,133 @@
+/* ==========================================================================
+   GDPR Cookie Banner — styles
+   Les boutons "Tout refuser" et "Tout accepter" ont volontairement le même
+   style : la CNIL demande que refuser soit aussi simple et visible qu'accepter.
+   ========================================================================== */
+
+.gcb[hidden],
+.gcb [hidden] {
+    display: none !important;
+}
+
+.gcb {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    z-index: 99999;
+    width: calc(100% - 32px);
+    max-width: 680px;
+    box-sizing: border-box;
+    background: #1d2327;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.gcb__inner {
+    padding: 18px 20px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+}
+
+.gcb__title {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.gcb__text {
+    margin: 0 0 14px;
+    color: #f0f0f1;
+}
+
+.gcb a {
+    color: #f0c040;
+    text-decoration: underline;
+}
+
+.gcb__prefs {
+    margin: 0 0 14px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+}
+
+.gcb__pref + .gcb__pref {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gcb__pref label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gcb__pref input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #f0c040;
+}
+
+.gcb__pref p {
+    margin: 4px 0 0 26px;
+    font-size: 13px;
+    color: #c3c4c7;
+}
+
+.gcb__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.gcb__btn {
+    flex: 1 1 auto;
+    min-height: 40px;
+    padding: 8px 16px;
+    border: 2px solid #f0c040;
+    border-radius: 5px;
+    background: #f0c040;
+    color: #1d2327;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.gcb__btn:hover,
+.gcb__btn:focus-visible {
+    background: #cd4906;
+    border-color: #cd4906;
+    color: #fff;
+}
+
+.gcb__btn--ghost {
+    background: transparent;
+    color: #f0c040;
+}
+
+.gcb__btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+    .gcb {
+        bottom: 0;
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .gcb__btn {
+        flex-basis: 100%;
+    }
+}
